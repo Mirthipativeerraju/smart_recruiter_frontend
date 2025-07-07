@@ -104,7 +104,7 @@ function JobsPage() {
         setOrganizationId(userId);
 
         // Fetch departments and locations if needed
-        const response = await axios.get(`http://localhost:5000/api/profiles/by-org/${userId}`);
+        const response = await axios.get(`https://smart-recruiter-backend.onrender.com/api/profiles/by-org/${userId}`);
         const result = response.data;
         if (response.status === 200 && result.success) {
           setDepartments(result.data.departments || []);
@@ -130,7 +130,7 @@ function JobsPage() {
 
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:5000/api/jobs?organizationId=${organizationId}`);
+        const response = await axios.get(`https://smart-recruiter-backend.onrender.com/api/jobs?organizationId=${organizationId}`);
         const jobsData = response.data;
 
         if (Array.isArray(jobsData) && jobsData.length > 0) {
@@ -164,7 +164,7 @@ function JobsPage() {
   // Handle opening the edit modal
   const handleEditJob = async (jobId) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/jobs/${jobId}`);
+      const response = await axios.get(`https://smart-recruiter-backend.onrender.com/api/jobs/${jobId}`);
       setEditJobData(response.data);
       setShowEditModal(true);
     } catch (error) {
@@ -187,7 +187,7 @@ function JobsPage() {
     e.preventDefault();
 
     try {
-      const response = await axios.put(`http://localhost:5000/api/jobs/${editJobData._id}`, editJobData);
+      const response = await axios.put(`https://smart-recruiter-backend.onrender.com/api/jobs/${editJobData._id}`, editJobData);
       if (response.status === 200) {
         const updatedJob = response.data.data;
         setJobs(jobs.map(job => job._id === editJobData._id ? updatedJob : job));
