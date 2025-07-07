@@ -21,7 +21,7 @@ const SendEmail = () => {
 
   const fetchCandidates = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/candidates');
+      const response = await axios.get('https://smart-recruiter-backend.onrender.com/api/candidates');
       setCandidates(response.data);
       setError('');
     } catch (error) {
@@ -36,7 +36,7 @@ const SendEmail = () => {
       return;
     }
     try {
-      const response = await axios.get(`http://localhost:5000/api/templates?adminId=${adminId}`);
+      const response = await axios.get(`https://smart-recruiter-backend.onrender.com/api/templates?adminId=${adminId}`);
       setTemplates(response.data.filter(t => t.database === 'Candidates'));
       setError('');
     } catch (error) {
@@ -76,7 +76,7 @@ const SendEmail = () => {
       return;
     }
     try {
-      await axios.post('http://localhost:5000/api/templates/send', { candidateId, templateId });
+      await axios.post('https://smart-recruiter-backend.onrender.com/api/templates/send', { candidateId, templateId });
       const candidate = candidates.find(c => c._id === candidateId);
       setMessage(`Email sent successfully to ${candidate?.firstName} ${candidate?.lastName}!`);
       setCandidateId('');
