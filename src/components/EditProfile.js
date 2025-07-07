@@ -56,7 +56,7 @@ function EditProfile() {
       }
 
       try {
-        const response = await axios.get(`http://localhost:5000/api/profiles/by-org/${user.userId}`);
+        const response = await axios.get(`https://smart-recruiter-backend.onrender.com/api/profiles/by-org/${user.userId}`);
         const profile = response.data.data;
 
         setProfileData({
@@ -74,7 +74,7 @@ function EditProfile() {
         });
         // Set the logo preview from the backend
         if (profile.logo) {
-          setLogoPreview(`http://localhost:5000/${profile.logo}`); // Adjust URL based on your server setup
+          setLogoPreview(`https://smart-recruiter-backend.onrender.com/${profile.logo}`); // Adjust URL based on your server setup
         }
       } catch (error) {
         setError("Error fetching profile data");
@@ -202,7 +202,7 @@ function EditProfile() {
     formData.append("yt_url", socialDetails.yt_url);
 
     try {
-      const response = await axios.put(`http://localhost:5000/api/profiles/update/${user.userId}`, formData, {
+      const response = await axios.put(`https://smart-recruiter-backend.onrender.com/api/profiles/update/${user.userId}`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
