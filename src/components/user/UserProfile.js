@@ -24,14 +24,14 @@ const UserProfile = () => {
     const fetchUserData = async () => {
       try {
         // Fetch user data from User model
-        const userResponse = await fetch(`http://localhost:5000/api/auth/${userId}`);
+        const userResponse = await fetch(`https://smart-recruiter-backend.onrender.com/api/auth/${userId}`);
         const userData = await userResponse.json();
         if (!userResponse.ok) throw new Error(userData.error || 'Failed to fetch user data');
         console.log('Fetched user data:', userData); // Debug log
         setUserData(userData);
 
         // Fetch applied jobs from Candidate model
-        const candidatesResponse = await fetch(`http://localhost:5000/api/candidates/user/${userId}`);
+        const candidatesResponse = await fetch(`https://smart-recruiter-backend.onrender.com/api/candidates/user/${userId}`);
         const candidatesData = await candidatesResponse.json();
         if (!candidatesResponse.ok) throw new Error(candidatesData.error || 'Failed to fetch applied jobs');
         console.log('Fetched applied jobs:', candidatesData); // Debug log
@@ -53,7 +53,7 @@ const UserProfile = () => {
 
   const handleWithdrawConfirm = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/candidates/withdraw/${selectedCandidateId}`, {
+      const response = await fetch(`https://smart-recruiter-backend.onrender.com/api/candidates/withdraw/${selectedCandidateId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId }),
