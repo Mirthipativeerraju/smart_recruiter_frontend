@@ -21,7 +21,7 @@ const Home = () => {
           return;
         }
 
-        const response = await axios.get(`http://localhost:5000/api/profiles/by-org/${user.userId}`);
+        const response = await axios.get(`https://smart-recruiter-backend.onrender.com/api/profiles/by-org/${user.userId}`);
         const profile = response.data.data;
 
         if (profile) {
