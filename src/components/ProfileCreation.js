@@ -246,7 +246,7 @@ function ProfileCreation() {
     formData.append("yt_url", socialDetails.yt_url);
 
     try {
-      const response = await axios.post("http://localhost:5000/api/profiles/create", formData, {
+      const response = await axios.post("https://smart-recruiter-backend.onrender.com/api/profiles/create", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
