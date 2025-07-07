@@ -17,13 +17,13 @@ const JobsPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const jobsResponse = await fetch('http://localhost:5000/api/jobs');
+        const jobsResponse = await fetch('https://smart-recruiter-backend.onrender.com/api/jobs');
         const jobsData = await jobsResponse.json();
         if (!jobsResponse.ok) throw new Error(jobsData.error || 'Failed to fetch jobs');
 
         let appliedIds = [];
         if (isLoggedIn && userId) {
-          const candidatesResponse = await fetch(`http://localhost:5000/api/candidates/user/${userId}`);
+          const candidatesResponse = await fetch(`https://smart-recruiter-backend.onrender.com/api/candidates/user/${userId}`);
           const candidatesData = await candidatesResponse.json();
           console.log('Candidates Data:', candidatesData);
           if (!candidatesResponse.ok) throw new Error(candidatesData.error || 'Failed to fetch applied jobs');
