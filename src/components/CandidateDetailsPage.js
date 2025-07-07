@@ -11,7 +11,7 @@ function CandidateDetailsPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [status, setStatus] = useState("");
-  const BASE_URL = "http://localhost:5000";
+  const BASE_URL = "https://smart-recruiter-backend.onrender.com";
 
   const statusOptions = [
     { value: "applied", label: "Applied" },
