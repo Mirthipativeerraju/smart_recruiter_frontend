@@ -101,7 +101,7 @@ function CandidatesPage() {
 
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:5000/api/jobs?organizationId=${organizationId}`);
+        const response = await axios.get(`https://smart-recruiter-backend.onrender.com/api/jobs?organizationId=${organizationId}`);
         const jobsData = response.data;
 
         if (Array.isArray(jobsData) && jobsData.length > 0) {
@@ -135,7 +135,7 @@ function CandidatesPage() {
       const counts = {};
       await Promise.all(
         jobsData.map(async (job) => {
-          const response = await axios.get(`http://localhost:5000/api/candidates/job/${job._id}`);
+          const response = await axios.get(`https://smart-recruiter-backend.onrender.com/api/candidates/job/${job._id}`);
           counts[job._id] = response.data.length; // Number of candidates who applied
         })
       );
