@@ -34,7 +34,7 @@ function SelectionProcessPage() {
   const [interviewLink, setInterviewLink] = useState("");
   const [sending, setSending] = useState(false);
 
-  const BASE_URL = "http://localhost:5000";
+  const BASE_URL = "https://smart-recruiter-backend.onrender.com";
   const user = JSON.parse(localStorage.getItem("user"));
   const organizationId = user?.userId;
 
