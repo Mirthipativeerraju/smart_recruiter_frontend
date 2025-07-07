@@ -109,7 +109,7 @@ const PostJob = () => {
 
       try {
         setLoading(true);
-        const response = await fetch(`http://localhost:5000/api/profiles/by-org/${userId}`);
+        const response = await fetch(`https://smart-recruiter-backend.onrender.com/api/profiles/by-org/${userId}`);
         const result = await response.json();
 
         if (response.ok && result.success) {
@@ -158,7 +158,7 @@ const PostJob = () => {
 
     try {
       const jobData = { ...formData, organizationId: userId };
-      const response = await fetch("http://localhost:5000/api/jobs/create-job", {
+      const response = await fetch("https://smart-recruiter-backend.onrender.com/api/jobs/create-job", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
