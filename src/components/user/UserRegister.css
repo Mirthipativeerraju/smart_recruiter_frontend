@@ -1,0 +1,136 @@
+.register-container {
+    min-height: calc(100vh - 70px - 100px); /* Adjust for Navbar (~70px) and Footer (~100px) */
+    background: linear-gradient(135deg, #1A1A1A 0%, #2C3E50 100%);
+    display: flex;
+    justify-content: center;
+    padding-top: 70px; /* Fixed padding for navbar */
+    padding-bottom: 20px; /* Space for footer */
+  }
+  
+  .register-box {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 450px;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .register-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #3498DB 0%, #2980B9 100%);
+  }
+  
+  .register-title {
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #2C3E50;
+    margin-bottom: 1.5rem;
+  }
+  
+  .register-input,
+  .otp-input {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease;
+  }
+  
+  .register-input:focus,
+  .otp-input:focus {
+    border-color: #3498DB;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+  }
+  
+  .otp-input {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .toggle-password {
+    cursor: pointer;
+    background: #ECF0F1;
+    border: 1px solid #ced4da;
+    border-left: 0;
+    border-radius: 0 8px 8px 0;
+    color: #2C3E50;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-password:hover {
+    background: #D5DBDB;
+  }
+  
+  .verify-button {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+  }
+  
+  .verify-button:hover {
+    background-color: #2980B9;
+    border-color: #2980B9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  }
+  
+  .register-button {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    padding: 0.75rem;
+    border-radius: 25px;
+    background-color: #3498DB;
+    border-color: #3498DB;
+    transition: all 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background-color: #2980B9;
+    border-color: #2980B9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  }
+  
+  .login-link {
+    color: #3498DB;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .login-link:hover {
+    color: #2980B9;
+    text-decoration: underline;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 576px) {
+    .register-box {
+      padding: 1.5rem;
+      max-width: 100%;
+      margin: 0 10px;
+    }
+  
+    .register-title {
+      font-size: 1.5rem;
+    }
+  
+    .otp-input {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .register-container {
+      padding-top: 60px; /* Slightly less for smaller screens */
+    }
+  }

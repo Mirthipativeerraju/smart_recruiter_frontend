@@ -1,0 +1,97 @@
+/* Mobile-first base styles */
+.bg-dark {
+  background-color: #212529 !important; /* Matches Navbar/Footer */
+}
+
+.job-details {
+  background-color: #ffffff; /* White background for details section */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
+}
+
+.job-details p {
+  color: #212529; /* Dark gray for readability on white background */
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.job-details strong {
+  color: #000000; /* Black for emphasis */
+}
+
+.job-details div { /* For description HTML content */
+  color: #212529; /* Dark gray for description text */
+}
+
+h1 {
+  color: #ffffff; /* Keep white for header outside card */
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 16px;
+  color: #adb5bd; /* Muted light gray for subtitle */
+}
+
+.btn-primary,
+.btn-outline-light {
+  font-size: 12px;
+  padding: 8px 12px;
+  margin: 5px 0;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-outline-dark {
+  border-color: #212529; /* Dark border for contrast */
+  color: #212529; /* Dark text */
+}
+
+.btn-outline-dark:hover {
+  background-color: #e9ecef; /* Light gray on hover */
+  color: #212529; /* Black text on hover */
+}
+
+.text-danger {
+  font-size: 14px;
+  padding: 10px;
+  color: #dc3545; /* Red for errors */
+}
+
+.text-light {
+  color: #ffffff; /* Keep white for elements outside card */
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .job-details {
+      padding: 20px;
+  }
+
+  .job-details p {
+      font-size: 16px;
+  }
+
+  h1 {
+      font-size: 24px;
+  }
+
+  h3 {
+      font-size: 18px;
+  }
+
+  .btn-primary,
+  .btn-outline-light {
+      font-size: 14px;
+      padding: 10px 15px;
+      margin: 0 10px 0 0;
+  }
+
+  .text-danger {
+      font-size: 16px;
+  }
+}

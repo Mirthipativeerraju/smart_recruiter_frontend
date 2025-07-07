@@ -1,0 +1,144 @@
+/* AboutUs.css */
+.bg-gradient-dark {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%); /* Softer slate transition */
+  }
+  
+  .text-primary {
+    color: #3b82f6; /* Bright, modern blue */
+  }
+  
+  .text-accent {
+    color: #facc15; /* Warm yellow accent for headings */
+  }
+  
+  .about-card, .feature-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .about-card:hover, .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #3b82f6, #60a5fa); /* Blue gradient */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-body {
+    padding: 25px;
+  }
+  
+  .animate-header {
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  .animate-card {
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .animate-button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(45deg, #3b82f6, #60a5fa); /* Matching button gradient */
+    border: none;
+  }
+  
+  .animate-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(59, 130, 246, 0.4);
+  }
+  
+  /* Creator Section Styles */
+  .creator-section {
+    padding: 20px 0;
+  }
+  
+  .creator-avatar {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .creator-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #facc15; /* Yellow accent border */
+    transition: border-color 0.3s ease;
+  }
+  
+  .creator-avatar:hover {
+    transform: scale(1.05);
+  }
+  
+  .creator-avatar:hover img {
+    border-color: #60a5fa; /* Blue on hover */
+  }
+  
+  .creator-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); /* Subtle gradient */
+    padding: 15px;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  .animate-creator {
+    animation: slideInRight 1s ease-in-out;
+  }
+  
+  h5 {
+    color: #1f2937; /* Dark gray for contrast */
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+  }
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideInRight {
+    0% { opacity: 0; transform: translateX(20px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-card, .feature-card {
+      margin-bottom: 20px;
+    }
+    .display-4 {
+      font-size: 2.5rem;
+    }
+    .creator-avatar {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 20px;
+    }
+    .creator-text {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }

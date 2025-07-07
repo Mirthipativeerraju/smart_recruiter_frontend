@@ -1,0 +1,109 @@
+/* Add this at the top of your CSS file */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hero-section {
+    background: linear-gradient(135deg, #1A1A1A 0%, #2C3E50 100%);
+    padding: 4rem 0;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-row {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+}
+
+.hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: #ECF0F1;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: #BDC3C7;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.hero-button {
+    background-color: #3498DB;
+    border-color: #3498DB;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.75rem 2.5rem;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #2980B9;
+    border-color: #2980B9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(52, 152, 219, 0.5);
+}
+
+.hero-image-col {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .hero-section {
+        padding: 4rem 0;
+        min-height: auto;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-image-col {
+        margin-bottom: 2rem; /* Add space between image and text on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-button {
+        width: 100%;
+        padding: 0.75rem 1.5rem;
+    }
+}

@@ -1,0 +1,100 @@
+/* Sidebar container styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff; /* Deep Navy */
+    color: black;
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    z-index: 1050;
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  @media (max-width: 991px) {
+    .sidebar {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Sidebar header with gradient background */
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  /* Logo styling */
+  .sidebar-logo {
+    max-width: 150px;
+    height: auto;
+    margin-left: 1.5rem;
+    
+  }
+  
+  @media (max-width: 991px) {
+    .sidebar-logo {
+      max-width: 120px;
+    }
+  }
+  
+  /* Menu list styling */
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-list li {
+    padding: 1rem 2rem;
+    transition: background 0.3s ease, color 0.3s ease;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+  }
+  
+  .menu-list li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Hover effect */
+  .menu-list li:hover a {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Active menu item */
+  .menu-list li.active a {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-left-color: #00bdc4; /* Teal active indicator */
+    font-weight: bold;
+  }
+  .view-jobs-container {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.view-jobs-btn {
+    display: inline-block;
+    background-color: #5b1ae3; /* Purple */
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 1rem 3rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.view-jobs-btn:hover {
+    background-color: #4a0fc8; /* Darker Purple on Hover */
+    text-decoration: none;
+}
+

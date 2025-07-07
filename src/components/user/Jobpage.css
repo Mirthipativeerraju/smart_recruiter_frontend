@@ -1,0 +1,160 @@
+/* Mobile-first base styles */
+.bg-dark {
+  background: linear-gradient(to right, #212529, #343a40); /* Page background */
+}
+
+/* Job Card Styles */
+.job-card {
+  background-color: #e9ecef; /* Light gray background */
+  border-radius: 12px;
+  border: 1px solid #ced4da; /* Light border */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.job-card .card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.job-card .card-title {
+  color: #000000; /* Black for titles */
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.job-card .card-text {
+  color: #000000; /* Black for secondary text */
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.job-card .text-muted {
+  color: #000000 !important; /* Black for muted text */
+}
+
+/* Job Type Badge */
+.job-type-badge {
+  font-size: 10px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #ffffff; /* White text for badges */
+}
+
+.job-type-badge.bg-primary {
+  background-color: #007bff; /* Blue for Full-time */
+}
+
+.job-type-badge.bg-success {
+  background-color: #28a745; /* Green for other types */
+}
+
+/* Button Styles */
+.job-card .btn-outline-primary {
+  border-color: #007bff;
+  color: #000000; /* Black text for button */
+  font-size: 12px;
+  padding: 6px 12px;
+  transition: all 0.3s ease;
+}
+
+.job-card .btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #ffffff; /* White text on hover */
+  border-color: #007bff;
+}
+
+/* Hover Effect */
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #f1f3f5; /* Slightly lighter on hover */
+}
+
+/* Modal Styles */
+.modal-content {
+  background: linear-gradient(to right, #212529, #343a40);
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.modal-header,
+.modal-footer {
+  padding: 10px;
+  border-color: #495057;
+}
+
+.modal-title {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.modal-body p {
+  color: #adb5bd;
+  font-size: 14px;
+}
+
+.modal-footer .btn-primary {
+  background-color: #007bff;
+  border: none;
+  font-size: 12px;
+  padding: 8px 12px;
+}
+
+.modal-footer .btn-outline-light {
+  border-color: #adb5bd;
+  color: #adb5bd;
+  font-size: 12px;
+  padding: 8px 12px;
+}
+
+.modal-footer .btn-outline-light:hover {
+  background-color: #495057;
+  color: #ffffff;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .job-card {
+    margin-bottom: 30px;
+  }
+
+  .job-card .card-title {
+    font-size: 18px;
+  }
+
+  .job-card .card-text {
+    font-size: 14px;
+  }
+
+  .job-card .btn-outline-primary {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .job-type-badge {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .modal-title {
+    font-size: 20px;
+  }
+
+  .modal-body p {
+    font-size: 16px;
+  }
+
+  .modal-footer .btn-primary,
+  .modal-footer .btn-outline-light {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}

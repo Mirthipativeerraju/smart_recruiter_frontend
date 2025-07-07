@@ -1,0 +1,26 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column; /* Stack sidebar and content in small screens */
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+}
+
+.main-content {
+  flex: 1; /* Allow it to grow fully */
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+  background-color: #f5f5f5; /* Light Gray Background */
+  min-height: 100vh; /* Ensures the full height */
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-area {
+  flex: 1; /* Makes sure it fills the remaining space */
+}
+
+@media (max-width: 991px) {
+  .main-content {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,79 @@
+/* Footer.css */
+.footer {
+    background: linear-gradient(135deg, #1A1A1A 0%, #2C3E50 100%);
+    color: #E5E7EB;
+    padding: 2rem 0;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; /* Center by default for small screens */
+  }
+  
+  .footer-text {
+    font-size: 1rem;
+    color: #E5E7EB;
+    opacity: 0.8;
+    text-align: center;
+    margin-bottom: 1rem; /* Space between text and icons on small screens */
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem; /* Space below icons on small screens */
+  }
+  
+  .social-icon {
+    color: #aaa;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #FFD700;
+    transform: translateY(-3px);
+  }
+  
+  /* Medium and Larger Screens */
+  @media (min-width: 768px) {
+    .footer-content {
+      flex-direction: row; /* Horizontal layout */
+      justify-content: space-between; /* Text left, icons right */
+    }
+  
+    .footer-text {
+      text-align: left; /* Align text to left */
+      margin-bottom: 0; /* Remove bottom margin on larger screens */
+    }
+  
+    .footer-text p:nth-child(2) {
+      margin-top: 0.25rem; /* Small spacing between copyright lines */
+    }
+  
+    .social-icons {
+      justify-content: flex-end; /* Align icons to right */
+      margin-bottom: 0; /* Remove bottom margin on larger screens */
+    }
+  }
+  
+  /* Small Screens */
+  @media (max-width: 767px) {
+    .footer-content {
+      flex-direction: column; /* Vertical stack */
+    }
+  
+    .footer-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-text p:nth-child(2) {
+      margin-top: 0.5rem; /* Spacing between text lines */
+    }
+  }
