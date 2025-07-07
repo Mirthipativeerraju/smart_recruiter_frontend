@@ -23,7 +23,7 @@ function NPassword() {
       return;
     }
 
-    fetch("http://localhost:5000/api/fp/update-password", {
+    fetch("https://smart-recruiter-backend.onrender.com/api/fp/update-password", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: state.email, newPassword: password }),
