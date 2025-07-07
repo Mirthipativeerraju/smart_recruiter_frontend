@@ -19,7 +19,7 @@ const JobDetails = () => {
       const fetchJob = async () => {
         try {
           console.log(`Fetching job with ID: ${id}`);
-          const response = await fetch(`http://localhost:5000/api/jobs/${id}`);
+          const response = await fetch(`https://smart-recruiter-backend.onrender.com/api/jobs/${id}`);
           const data = await response.json();
           console.log('Response:', response.ok, data);
           if (response.ok) {
