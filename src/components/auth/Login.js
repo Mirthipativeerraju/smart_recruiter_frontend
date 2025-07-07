@@ -16,7 +16,7 @@ function Login() {
     setSuccess(""); // Reset success message
 
     try {
-      const response = await fetch("http://localhost:5000/api/org/login", {
+      const response = await fetch("https://smart-recruiter-backend.onrender.com/api/org/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
