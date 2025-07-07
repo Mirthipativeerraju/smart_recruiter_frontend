@@ -116,9 +116,9 @@ const CreateTemplateModal = ({ show, onHide, onSave, template }) => {
       const data = { name, database: databaseArray, content: htmlContent, adminId, organizationId };
       console.log('Data being sent to backend:', data);
       if (template) {
-        await axios.put(`http://localhost:5000/api/templates/${template._id}`, data);
+        await axios.put(`https://smart-recruiter-backend.onrender.com/api/templates/${template._id}`, data);
       } else {
-        await axios.post('http://localhost:5000/api/templates', data);
+        await axios.post('https://smart-recruiter-backend.onrender.com/api/templates', data);
       }
       onSave();
       onHide();
