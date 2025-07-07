@@ -34,7 +34,7 @@ function VOTP() {
     e.preventDefault();
     const otp = inputCode.join("");
     // Verify OTP with the backend
-    fetch("http://localhost:5000/api/fp/verify-otp", {
+    fetch("https://smart-recruiter-backend.onrender.com/api/fp/verify-otp", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ otp }),
