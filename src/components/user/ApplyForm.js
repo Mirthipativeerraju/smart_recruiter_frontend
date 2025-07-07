@@ -19,7 +19,7 @@ const JobApplyForm = () => {
   });
   const [showSuccess, setShowSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [generalError, setGeneralError] = useState([]); // Changed to array to hold multiple errors
+  const [generalError, setGeneralError] = useState([]); 
   const [hasApplied, setHasApplied] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
@@ -48,7 +48,7 @@ const JobApplyForm = () => {
 
     const checkApplicationStatus = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/candidates/user/${userId}`);
+        const response = await fetch(`https://smart-recruiter-backend.onrender.com/api/candidates/user/${userId}`);
         const applications = await response.json();
         if (response.ok && applications.some(app => app.jobId.toString() === id)) {
           setHasApplied(true);
@@ -61,7 +61,7 @@ const JobApplyForm = () => {
 
     const fetchJob = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/jobs/${id}`);
+        const response = await fetch(`https://smart-recruiter-backend.onrender.com/api/jobs/${id}`);
         const data = await response.json();
         if (response.ok) {
           setJobTitle(data.position);
@@ -279,7 +279,7 @@ const JobApplyForm = () => {
     submissionData.append('resume', formData.resume);
 
     try {
-      const response = await fetch('http://localhost:5000/api/candidates/apply', {
+      const response = await fetch('https://smart-recruiter-backend.onrender.com/api/candidates/apply', {
         method: 'POST',
         body: submissionData,
       });
