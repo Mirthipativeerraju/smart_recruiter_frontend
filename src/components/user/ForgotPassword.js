@@ -18,7 +18,7 @@ function FPassword() {
       setError(null);
       setLoading(true);
       // Send OTP request to the backend
-      fetch("http://localhost:5000/api/fp/forgot-password", {
+      fetch("https://smart-recruiter-backend.onrender.com/api/fp/forgot-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
