@@ -24,7 +24,7 @@ const TemplateList = () => {
 
   const fetchTemplates = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/templates?organizationId=${organizationId}`);
+      const response = await axios.get(`https://smart-recruiter-backend.onrender.com/api/templates?organizationId=${organizationId}`);
       setTemplates(response.data);
       setError('');
     } catch (error) {
@@ -36,7 +36,7 @@ const TemplateList = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this template?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/templates/${id}`);
+        await axios.delete(`https://smart-recruiter-backend.onrender.com/api/templates/${id}`);
         setTemplates(templates.filter(t => t._id !== id));
         setToastMessage('Template deleted!');
         setShowToast(true);
